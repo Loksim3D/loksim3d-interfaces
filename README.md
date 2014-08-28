@@ -9,7 +9,7 @@ This repository is still under development, it may take some time until all requ
 
 ----------------
 
-Dieses Repository beinhaltet Beispielprogramme, zusäztliche Tools und Dokumentationen für die Kommunikation über die Schnittstellen des Loksim3D [1] (OLE, TCP und zukünftige Protokolle
+Dieses Repository beinhaltet Beispielprogramme, zusäztliche Tools und Dokumentationen für die Kommunikation über die Schnittstellen des Loksim3D [1] (OLE, TCP und zukünftige Protokolle)
 
 Dieses Repository befindet sich noch im Aufbau, es wird einige Zeit benötigen bis sämtlichen Informationen und Programme hier verfügbar sind.
 
