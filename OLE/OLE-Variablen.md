@@ -98,26 +98,26 @@ Die Zugsicherungssysteme werden dabei folgendermaßen benannt:
 
 #### Optionen PZB90
 - Art
--- I60R
--- I60ER24
--- PZ80R
--- I80
+    - I60R
+    - I60ER24
+    - PZ80R
+    - I80
 - Version
--- V1.5
--- V1.6
--- V2.0
+    - V1.5
+    - V1.6
+    - V2.0
 - Sonderbauform (nur enthalten wenn tatsächlich eine Sonderbauform)
--- STADTBAHN
+    - STADTBAHN
 - Zugart
--- O
--- M
--- U
+    - O
+    - M
+    - U
 
 #### Optionen LZB
 - Art
--- 80
--- CE1
--- CE2
+    - 80
+    - CE1
+    - CE2
 
 
 ### Nicht mehr genutzte Variablen
