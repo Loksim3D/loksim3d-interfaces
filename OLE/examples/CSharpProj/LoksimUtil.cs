@@ -51,6 +51,23 @@ namespace LoksimUtil
 		public const int KEY_BEFEHLINDUSI      = 31;
 		public const int KEY_HALTANSAGE        = 32;
 		public const int KEY_BUEGEL            = 33;
+        public const int KEY_FAHRTENSCHREIBER  = 34; 
+        public const int KEY_BUCHFAHRPLAN      = 35; 
+        public const int KEY_BREMSZETTEL       = 36; 
+        public const int KEY_FAHRZEITENHEFT    = 37; 
+        public const int KEY_LOKINFO           = 38; 
+        public const int KEY_LUEFTER           = 39; 
+        public const int KEY_FREIWACHSAM       = 40; 
+        public const int KEY_VSOLLAFBLZB       = 41; 
+        public const int KEY_MAGNETBREMSE      = 42; 
+        public const int KEY_RICHTUNGSWALZE    = 43; 
+        public const int KEY_SONDSOUND1        = 44; 
+        public const int KEY_SONDSOUND2        = 45; 
+        public const int KEY_RICHTUNGSWALZE_V  = 46; 
+        public const int KEY_RICHTUNGSWALZE_N  = 47; 
+        public const int KEY_RICHTUNGSWALZE_R  = 48;
+        public const int KEY_STOERSCHALTER_INDUSI = 49; 
+        public const int KEY_WEGMESSUNG         = 50; 
 
 
 		//OleParameter
