@@ -91,6 +91,8 @@ Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim n
 | 2640 | 0A50 | LM GNT Ü | ? |
 | 2641 | 0A51 | LM GNT B | ? |
 | 2642 | 0A52 | LM GNT S | ? |
+| 2643 | 0A54 | Hintergrundbild | (Keine Nutzdaten) |
+| 2644 | 0A55 | Platzhalter Nachtinstrument | (Keine Nutzdaten) | 
 | 2645 | 0A55 | Strecken-Km | ? |
 | 2646 | 0A56 | Türen | ? |
 | 2647 | 0A57 | Autopilot | N/A |
