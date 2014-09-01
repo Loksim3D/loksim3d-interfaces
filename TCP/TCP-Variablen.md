@@ -1,18 +1,18 @@
 # TCP-Datenausgabe
 
-Die TCP-Schnittstelle wurde von Zusi übernommen. Informationen finden sich in [diesem] (http://forum.zusi.de/viewtopic.php?f=39&t=11779) Sammelthread aus dem Zusi-Forum.
+Die TCP-Schnittstelle wurde von Zusi Ã¼bernommen. Informationen finden sich in [diesem] (http://forum.zusi.de/viewtopic.php?f=39&t=11779) Sammelthread aus dem Zusi-Forum.
 
-Zur Implentierung empfiehlt es sich, einer der dort aufgeführten Wraper zu verwenden. (Zur Zeit stehen Wraper für .Net, Java und C++/Win32 zur Verfügung.)
+Zur Implentierung empfiehlt es sich, einer der dort aufgefÃ¼hrten Wraper zu verwenden. (Zur Zeit stehen Wraper fÃ¼r .Net, Java und C++/Win32 zur VerfÃ¼gung.)
 
-Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim nicht unterstützt werden, werden dennoch zur Anforderung akzeptiert, auch wenn Loksim sie nicht liefern kann.
+Folgende Daten werden von dem Protokoll unterstÃ¼tzt. GrÃ¶ÃŸen, die von Loksim nicht unterstÃ¼tzt werden, werden dennoch zur Anforderung akzeptiert, auch wenn Loksim sie nicht liefern kann.
 
-| ID | ID (hex) | Funktion | Unterstützung |
+| ID | ID (hex) | Funktion | UnterstÃ¼tzung |
 |----|----------|----------|---------------|  
-| 2560 | 0A00 | (ohne Funktion) | Nein |
-| 2561 | 0A01 | **Geschwindigkeit** | Ja |
+| 2560 | 0A00 | (ohne Funktion) | (Keine Nutzdaten) |
+| **2561** | **0A01** | **Geschwindigkeit** | **Ja** |
 | 2562 | 0A02 | Druck Hauptluftleitung | ? |
 | 2563 | 0A03 | Druck Bremszylinder | ? |
-| 2564 | 0A04 | Druck Hauptluftbehälter | ? |
+| 2564 | 0A04 | Druck HauptluftbehÃ¤lter | ? |
 | 2565 | 0A05 | Zugkraft gesamt | ? |
 | 2566 | 0A06 | Zugkraft pro Achse | ? |
 | 2567 | 0A07 | Strom | ? |
@@ -25,26 +25,26 @@ Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim nich
 | 2574 | 0A0E | LZB/AFB Soll-Geschwindigkeit | ? |
 | 2575 | 0A0F | LZB Zielweg | ? |
 | 2576 | 0A10 | Fahrstufe | ? |
-| 2577 | 0A11 |  | ? |
+| 2577 | 0A11 | 3D-Fenster | (Keine Nutzdaten) |
 | 2578 | 0A12 | AFB Soll-Geschwindigkeit | ? |
-| 2579 | 0A13 | Druck Hilfsluftbehälter | ? |
-| 2580 | 0A14 | LM PZB 1000Hz | Ja |
-| 2581 | 0A15 | LM PZB 500Hz | Ja |
-| 2582 | 0A16 | LM PZB Befehl | Ja |
-| 2583 | 0A17 | LM PZB Zugart U | Ja |
-| 2584 | 0A18 | LM PZB Zugart M | Ja |
-| 2585 | 0A19 | LM PZB Zugart O | Ja |
+| 2579 | 0A13 | Druck HilfsluftbehÃ¤lter | ? |
+| **2580** | **0A14** | **LM PZB 1000Hz** | **Ja** |
+| **2581** | **0A15** | **LM PZB 500Hz** | **Ja** |
+| **2582** | **0A16** | **LM PZB Befehl** | **Ja** |
+| **2583** | **0A17** | **LM PZB Zugart U** | **Ja** |
+| **2584** | **0A18** | **LM PZB Zugart M** | **Ja** |
+| **2585** | **0A19** | **LM PZB Zugart O** | **Ja** |
 | 2586 | 0A1A | LM LZB H | ? |
 | 2587 | 0A1B | LM LZB G | ? |
 | 2588 | 0A1C | LM LZB E40 | N/A |
 | 2589 | 0A1D | LM LZB EL | N/A |
-| 2590 | 0A1E | LM LZB Ende | Ja |
+| **2590** | **0A1E** | **LM LZB Ende** | **Ja** |
 | 2591 | 0A1F | LM LZB V40 | N/A |
-| 2592 | 0A20 | LM LZB B | Ja |
+| **2592** | **0A20** | **LM LZB B** | **Ja** |
 | 2593 | 0A21 | LM LZB S | N/A |
-| 2594 | 0A22 | LM LZB Ü | Ja |
-| 2595 | 0A23 | LM LZB Prüfen | ? |
-| 2596 | 0A24 | LM Sifa | Ja |
+| **2594** | **0A22** | **LM LZB Ãœ** | **Ja** |
+| 2595 | 0A23 | LM LZB PrÃ¼fen | ? |
+| **2596** | **0A24** | **LM Sifa** | **Ja** |
 | 2597 | 0A25 | LM Hauptschalter | ? |
 | 2598 | 0A26 | LM Getriebe | ? |
 | 2599 | 0A27 | LM Schleudern | ? |
@@ -55,12 +55,12 @@ Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim nich
 | 2604 | 0A2C | LM Hochabbremsung | ? |
 | 2605 | 0A2D | LM Schnellbremsung | ? |
 | 2606 | 0A2E | LM Notbremsung | ? |
-| 2607 | 0A2F | LM Türen | ? |
+| 2607 | 0A2F | LM TÃ¼ren | ? |
 | 2608 | 0A30 | LM Tfz-Nummer | ? |
 | 2609 | 0A31 | LM max. Tfz-Geschwindidigkeit | ? |
 | 2610 | 0A32 | LM Uhrzeit (digital) | ? |
 | 2611 | 0A33 | Schalter Fahrstufen | ? |
-| 2612 | 0A34 | Schalter Führerbremsventil | ? |
+| 2612 | 0A34 | Schalter FÃ¼hrerbremsventil | ? |
 | 2613 | 0A35 | Schalter dyn. Bremse | ? |
 | 2614 | 0A36 | Schalter Zusatzbremse | ? |
 | 2615 | 0A37 | Schalter AFB-Geschwindigkeit | ? |
@@ -75,42 +75,42 @@ Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim nich
 | 2624 | 0A40 | Schalter Fahrtrichtung | ? |
 | 2625 | 0A41 | Schalter Pfeife | ? |
 | 2626 | 0A42 | Schalter Sanden | ? |
-| 2627 | 0A43 | Schalter Türen | ? |
+| 2627 | 0A43 | Schalter TÃ¼ren | ? |
 | 2628 | 0A44 | Schalter Glocke | ? |
-| 2629 | 0A45 | Schalter Lokbremse entlüften | ? |
+| 2629 | 0A45 | Schalter Lokbremse entlÃ¼ften | ? |
 | 2630 | 0A46 | Schalter Schleuderschutzbremse | ? |
 | 2631 | 0A47 | LM Drehzahlverstellung | ? |
 | 2632 | 0A48 | LM Fahrtrichtung vor | ? |
-| 2633 | 0A49 | LM Fahrtrichtung zurück | ? |
+| 2633 | 0A49 | LM Fahrtrichtung zurÃ¼ck | ? |
 | 2634 | 0A4A | Schalter Signum | ? |
 | 2635 | 0A4B | LM LZB Zielweg (ab 0) | ? |
 | 2636 | 0A4C | LZB Soll-Geschwindigkeit | ? |
 | 2637 | 0A4D | LM Block, bis zu dem die Strecke frei ist | ? |
-| 2638 | 0A4E | Schalter Lüfter | ? |
+| 2638 | 0A4E | Schalter LÃ¼fter | ? |
 | 2639 | 0A4F | LM GNT G | ? |
-| 2640 | 0A50 | LM GNT Ü | ? |
+| 2640 | 0A50 | LM GNT Ãœ | ? |
 | 2641 | 0A51 | LM GNT B | ? |
 | 2642 | 0A52 | LM GNT S | ? |
 | 2645 | 0A55 | Strecken-Km | ? |
-| 2646 | 0A56 | Türen | ? |
+| 2646 | 0A56 | TÃ¼ren | ? |
 | 2647 | 0A57 | Autopilot | N/A |
 | 2648 | 0A58 | Reisezug | ? |
 | 2649 | 0A59 | PZB-System | ? |
 | 2650 | 0A5A | Frames per Second | ? |
-| 2651 | 0A5B | Führerstand sichtbar | ? |
-| 2652 | 0A5C | Nächster Blockname | ? |
-| 2653 | 0A5D | Nächstes Gleis | ? |
+| 2651 | 0A5B | FÃ¼hrerstand sichtbar | ? |
+| 2652 | 0A5C | NÃ¤chster Blockname | ? |
+| 2653 | 0A5D | NÃ¤chstes Gleis | ? |
 | 2654 | 0A5E | Bremshundertstel | ? |
 | 2655 | 0A5F | Bremsstellung | ? |
 | 2656 | 0A60 | Zugdatei | ? |
-| 2657 | 0A61 | Längsbeschleunigung | ? |
+| 2657 | 0A61 | LÃ¤ngsbeschleunigung | ? |
 | 2658 | 0A62 | Querbeschleunigung | ? |
 | 2659 | 0A63 | Querneigung | ? |
-| 2660 | 0A64 | Aktuelle Höchstgeschwindigkeit | ? |
+| 2660 | 0A64 | Aktuelle HÃ¶chstgeschwindigkeit | ? |
 | 2661 | 0A65 | Aktuelle Zielgeschwindigkeit | ? |
 | 2662 | 0A66 | Zielweg | ? |
-| 2663 | 0A67 | Abstand nächster Reisezughalt | ? |
-| 2664 | 0A68 | Name nächster Reisezughalt | ? |
-| 2665 | 0A69 | Planzeit nächster Reisezughalt | ? |
+| 2663 | 0A67 | Abstand nÃ¤chster Reisezughalt | ? |
+| 2664 | 0A68 | Name nÃ¤chster Reisezughalt | ? |
+| 2665 | 0A69 | Planzeit nÃ¤chster Reisezughalt | ? |
 | 2666 | 0A6A | PZB restriktiv | ? |
 | 2667 | 0A6B | PZB-Zwansgbremsung | ? |
