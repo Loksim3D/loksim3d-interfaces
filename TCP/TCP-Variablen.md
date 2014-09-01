@@ -28,12 +28,12 @@ Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim n
 | 2577 | 0A11 | 3D-Fenster | (Keine Nutzdaten) |
 | 2578 | 0A12 | AFB Soll-Geschwindigkeit | ? |
 | 2579 | 0A13 | Druck Hilfsluftbehälter | ? |
-| **2580** | **0A14** | **LM PZB 1000Hz** | **Ja** |
-| **2581** | **0A15** | **LM PZB 500Hz** | **Ja** |
-| **2582** | **0A16** | **LM PZB Befehl** | **Ja** |
-| **2583** | **0A17** | **LM PZB Zugart U** | **Ja** |
-| **2584** | **0A18** | **LM PZB Zugart M** | **Ja** |
-| **2585** | **0A19** | **LM PZB Zugart O** | **Ja** |
+| **2580** | **0A14** | **LM PZB 1000Hz / PZ80 60** | PZB: **Ja** PZ80: ? |
+| **2581** | **0A15** | **LM PZB 500Hz / PZ80 40** | PZB: **Ja** PZ80: ? |
+| **2582** | **0A16** | **LM PZB Befehl / PZ80 LM** | PZB: **Ja** PZ80: ? |
+| **2583** | **0A17** | **LM PZB Zugart U / PZ80 Geschwindigkeit** | PZB: **Ja** PZ80: ? |
+| **2584** | **0A18** | **LM PZB Zugart M / PZ80 Programm** | PZB: **Ja** PZ80: ? |
+| **2585** | **0A19** | **LM PZB Zugart O / PZ80 PZB** | PZB: **Ja** PZ80: ? |
 | 2586 | 0A1A | LM LZB H | ? |
 | 2587 | 0A1B | LM LZB G | ? |
 | 2588 | 0A1C | LM LZB E40 | N/A |
