@@ -36,10 +36,10 @@ Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim n
 | **2585** | **0A19** | **LM PZB Zugart O / PZ80 PZB** | PZB: **Ja** PZ80: ? | PZB 85 / 95 |
 | 2586 | 0A1A | LM LZB H | Nein | ? |
 | **2587** | **0A1B** | **LM LZB G** | **Ja** | Geschwindigkeitsanpassung |
-| **2588** | **0A1C** | **LM LZB E40** | **Ja** | Ersatzsignal, in Zusi unbenutzt |
-| 2589 | 0A1D | LM LZB EL | N/A | Schutzstrecke, in Zusi unbenutzt |
+| **2588** | **0A1C** | **LM LZB E40** | **Ja** | Ersatzsignal, in Zusi 2 unbenutzt |
+| 2589 | 0A1D | LM LZB EL | N/A | Schutzstrecke, in Zusi 2 unbenutzt |
 | **2590** | **0A1E** | **LM LZB Ende** | **Ja** | |
-| **2591** | **0A1F** | **LM LZB V40** | **Ja** | Vorsichtssignal, in Zusi unbenutzt |
+| **2591** | **0A1F** | **LM LZB V40** | **Ja** | Vorsichtssignal, in Zusi 2 unbenutzt |
 | **2592** | **0A20** | **LM LZB B** | **Ja** | Bereitschaft |
 | **2593** | **0A21** | **LM LZB S** | **Ja** | Zwangsbremsung |
 | **2594** | **0A22** | **LM LZB Ü** | **Ja** | Überwachung |
