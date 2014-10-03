@@ -34,16 +34,16 @@ Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim n
 | **2583** | **0A17** | **LM PZB Zugart U / PZ80 Geschwindigkeit** | PZB: **Ja** PZ80: ? | PZB 60 / 55 |
 | **2584** | **0A18** | **LM PZB Zugart M / PZ80 Programm** | PZB: **Ja** PZ80: ? | PZB 75 / 70 |
 | **2585** | **0A19** | **LM PZB Zugart O / PZ80 PZB** | PZB: **Ja** PZ80: ? | PZB 85 / 95 |
-| 2586 | 0A1A | LM LZB H | Nein | ? |
+| 2586 | 0A1A | LM LZB H | Nein | Haltsingal überfahren, in Zusi 2 vermutlich unbenutzt |
 | **2587** | **0A1B** | **LM LZB G** | **Ja** | Geschwindigkeitsanpassung |
 | **2588** | **0A1C** | **LM LZB E40** | **Ja** | Ersatzsignal, in Zusi 2 unbenutzt |
 | 2589 | 0A1D | LM LZB EL | N/A | Schutzstrecke, in Zusi 2 unbenutzt |
 | **2590** | **0A1E** | **LM LZB Ende** | **Ja** | |
 | **2591** | **0A1F** | **LM LZB V40** | **Ja** | Vorsichtssignal, in Zusi 2 unbenutzt |
 | **2592** | **0A20** | **LM LZB B** | **Ja** | Bereitschaft |
-| **2593** | **0A21** | **LM LZB S** | **Ja** | Zwangsbremsung |
+| **2593** | **0A21** | **LM LZB S** | **Ja** | Schnellbremsung, in Zusi 2 unbenutzt |
 | **2594** | **0A22** | **LM LZB Ü** | **Ja** | Überwachung |
-| 2595 | 0A23 | LM LZB Prüfen | N/A | ? |
+| 2595 | 0A23 | LM LZB Prüfen | N/A | Prüftaster / Störmelder (?), in Zusi 2 unbenutzt |
 | **2596** | **0A24** | **LM Sifa** | **Ja** | |
 | **2597** | **0A25** | **LM Hauptschalter** | **Ja** | |
 | 2598 | 0A26 | LM Getriebe | N/A | (vereinfachtes Antriebsmodell) |
@@ -108,10 +108,10 @@ Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim n
 | 2657 | 0A61 | Längsbeschleunigung | Ausstehend | |
 | 2658 | 0A62 | Querbeschleunigung | Ausstehend | |
 | 2659 | 0A63 | Querneigung | Ausstehend | |
-| 2660 | 0A64 | Aktuelle Höchstgeschwindigkeit | Nein | ? |
-| 2661 | 0A65 | Aktuelle Zielgeschwindigkeit | Nein | ?? |
-| 2662 | 0A66 | Zielweg | Nein | ??? |
-| 2663 | 0A67 | Abstand nächster Reisezughalt | Nein | |
+| 2660 | 0A64 | Aktuelle Höchstgeschwindigkeit | Ausstehend | Autopilot-Hilfsgröße: Aktuelle Vmax |
+| 2661 | 0A65 | Aktuelle Zielgeschwindigkeit | Ausstehend | Autopilot-Hilfsgröße: Nächste Geschwindigkeitsbegrenzung in km/h oder -1, wenn keine Begrenzung mehr folgt. (Auch Begrenzungen durch Signale.) |
+| 2662 | 0A66 | Zielweg | Ausstehend | Autopilot-Hilfsgröße: Distanz, in der 2661 gilt. |
+| 2663 | 0A67 | Abstand nächster Reisezughalt | Ausstehend | |
 | 2664 | 0A68 | Name nächster Reisezughalt | Ausstehend | |
 | 2665 | 0A69 | Planzeit nächster Reisezughalt | Ausstehend | |
 | **2666** | **0A6A** | **PZB restriktiv** | **Ja** | |
