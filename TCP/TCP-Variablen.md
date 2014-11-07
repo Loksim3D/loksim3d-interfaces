@@ -6,6 +6,8 @@ Zur Implentierung empfiehlt es sich, einer der dort aufgeführten Wraper zu verw
 
 Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim nicht unterstützt werden, werden dennoch zur Anforderung akzeptiert, auch wenn Loksim sie nicht liefern kann.
 
+Benötigt man einen Teil der TCP-Schnittstelle die (derzeit) im Loksim nicht umgesetzt ist, ist es empfehlenswert direkt bei den Entwicklern nachzufragen. Aufgrund des beschränkten Einsatzgebiets der Schnittstelle erweitern wir (Entwickler) die Schnittstelle im Großen und Ganzen nur auf konkrete Anfragen. Also keine Scheu und lieber einmal zu oft nachfragen
+
 | ID | ID (hex) | Funktion | Unterstützung |Bemerkungen|
 |----|----------|----------|---------------|-----------|
 | 2560 | 0A00 | (ohne Funktion) | (Keine Nutzdaten) | |
@@ -28,9 +30,9 @@ Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim n
 | 2577 | 0A11 | 3D-Fenster | (Keine Nutzdaten) | |
 | **2578** | **0A12** | **AFB Soll-Geschwindigkeit** | **Ja** | |
 | 2579 | 0A13 | Druck Hilfsluftbehälter | Nein | (kein HLB in Loksim) |
-| **2580** | **0A14** | **LM PZB 1000Hz / PZ80 60** | PZB: **Ja** PZ80: ? | |
+| **2580** | **0A14** | **LM PZB 1000Hz / PZ80 60** | PZB: **Ja** PZ80: ? | Loksim-Doppelbelegung PZB-Systeme siehe unten |
 | **2581** | **0A15** | **LM PZB 500Hz / PZ80 40** | PZB: **Ja** PZ80: ? | |
-| **2582** | **0A16** | **LM PZB Befehl / PZ80 LM** | PZB: **Ja** PZ80: ? | |
+| 2582 | 0A16 | LM PZB Befehl / PZ80 LM | PZB:  Nein  PZ80: Nein | |
 | **2583** | **0A17** | **LM PZB Zugart U / PZ80 Geschwindigkeit** | PZB: **Ja** PZ80: ? | PZB 60 / 55 |
 | **2584** | **0A18** | **LM PZB Zugart M / PZ80 Programm** | PZB: **Ja** PZ80: ? | PZB 75 / 70 |
 | **2585** | **0A19** | **LM PZB Zugart O / PZ80 PZB** | PZB: **Ja** PZ80: ? | PZB 85 / 95 |
@@ -69,7 +71,7 @@ Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim n
 | **2618** | **0A3A** | **Schalter PZB Wachsam** | **Ja** | Herunterdrücken der Wachsam-Taste |
 | **2619** | **0A3B** | **Schalter PZB Frei** | **Ja** | Herunterdrücken der Freitaste |
 | **2620** | **0A3C** | **Schalter PZB Befehl** | **Ja** | Herunterdrücken der Befehlstaste |
-| 2621 | 0A3D | Schalter Sifa | ? | Herunterdrücken eines Sifa-Knopfes |
+| 2621 | 0A3D | Schalter Sifa | Nein | Herunterdrücken eines Sifa-Knopfes |
 | 2622 | 0A3E | Schalter Hauptschalter | Nein | |
 | 2623 | 0A3F | Schalter Motor ein/aus | Nein | |
 | 2624 | 0A40 | Schalter Fahrtrichtung | Ausstehend | |
@@ -97,7 +99,7 @@ Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim n
 | 2646 | 0A56 | Türen | Nein | Türen geschlossen, Fahrgastwechsel beendet, Zp9, etc. (vereinfachtes Abfertigungsmodell) |
 | 2647 | 0A57 | Autopilot | N/A | (nicht implentiert) |
 | 2648 | 0A58 | Reisezug | Ausstehend | |
-| **2649** | **0A59** | **PZB-System** | **Ja** | Art der Zugsicherung |
+| **2649** | **0A59** | **PZB-System** | **Ja** | Art der Zugsicherung, Loksim: siehe unten PZB-System |
 | 2650 | 0A5A | Frames per Second | Ausstehend | |
 | 2651 | 0A5B | Führerstand sichtbar | Ausstehend | |
 | 2652 | 0A5C | Nächster Blockname | Nein | (keine Signalnamen in Loksim) |
@@ -117,3 +119,22 @@ Folgende Daten werden von dem Protokoll unterstützt. Größen, die von Loksim n
 | **2666** | **0A6A** | **PZB restriktiv** | **Ja** | |
 | **2667** | **0A6B** | **PZB-Zwansgbremsung** | **Ja** | |
 | **2680** | **0A78** | **Oberstrom** | **Ja, nur Loksim** | In Zusi 2 durch 2565/0A05/Zugkraft geregelt |
+
+## PZB-Systeme
+Der gesendete Wert bei ''PZB-System'' ist statisch und nur abhängig davon, welche Induktive Zugsicherung im Führerstand eingestellt ist. Der Wert kann sich während der Fahrt nicht ändern
+
+| PZB-System im Führerstand | gesendeter Datenwert |
+|-------|---|
+| I60   | 3 |
+| I60R  | 4 |
+| PZB90 (außer PZB90I60) | 5 |
+| PZB90I60 | 6 |
+| PZ80  | 7 |
+| PZ80R | 8 |
+
+### Doppelbelegung IDs 2580 ff
+Die genaue Bedeutung der IDs 2580-2585 ist abhängig vom eingestellten Zugsicherungssystem (LoksimEdit: Art der Indusi)
+
+Die Doppelbelegung entspricht dabei genau der gleichen Belegung wie der im Führerstand sichtbaren Instrumente (LoksimEdit: Indusi 1000Hz (LZV gelb), Indusi 500Hz (LVZ rot), Indusi 95 (LVZ grün), Indusi 75 (LVZ gelb/schwarz), Indusi 60 (PZB Löschmelder))
+
+Eine genauere Aufschlüsselung wird an dieser Stelle nachgereicht
