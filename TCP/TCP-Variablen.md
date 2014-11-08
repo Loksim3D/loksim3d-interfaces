@@ -131,6 +131,7 @@ Der gesendete Wert bei ''PZB-System'' ist statisch und nur abhängig davon, welc
 | PZB90I60 | 6 |
 | PZ80  | 7 |
 | PZ80R | 8 |
+| keine der obigen | 0 |
 
 ### Doppelbelegung IDs 2580 ff
 Die genaue Bedeutung der IDs 2580-2585 ist abhängig vom eingestellten Zugsicherungssystem (LoksimEdit: Art der Indusi)
