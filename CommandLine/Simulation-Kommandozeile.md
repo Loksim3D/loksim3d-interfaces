@@ -11,6 +11,10 @@ Loksim (Simulationsprogramm) ermöglicht mit folgenden Komandozeilenargumenten e
 | /StartIndex:%1 | %1: Nullbasierter Index der Anfangszeit | Startet Loksim zur angegebenen Startzeit |
 | /WetterIndex:%1 | %1: Nullbasierter Index aus der Wetterdatei | Startet Loksim mit dem Wetter, das im Fahrplan angegen wird, und das in der Wetterdatei den angegebenen Index hat. Wird dieser Parameter Weggelassen, wird das Wetter zufällig bestimmt. Ist im Fahrplan kein Wetter angegeben, wird die klassische Himmelsdarstellung umgesetzt. 
 
+Argumente die zur Auswahl des Szenarios dienen (alle außer /hidemsg) dürfen dabei nicht durch ein Leerzeichen getrennt werden. Leerzeichen in den Pfaden werden korrekt verarbeitet, die Pfade dürfen jedoch nicht durch Anführungszeichen abgegrenzt sein. Ein beispielhafter Aufruft lautet somit:
+
+    C:\Users\Max>"C:\Loksim3D\Loksim3D.exe" Fahrplan:C:\Loksim-Data\Fahrplan\Demo2\ICE\ICE ab Hainfurt.l3dfpl/Lok:C:\Loksim-Data\Loksim-Data\Lok\Triebwagen-E\BR 406\UPeters\406_einfach.l3dlok/StartBahnhof:Hainfurt/StartIndex:1/WetterIndex:1
+
 Siehe auch: http://www.loksim.de/Wiki/index.php/Kommandozeilenargumente
 
 ## Standardhinweise: Batch-Dateien
