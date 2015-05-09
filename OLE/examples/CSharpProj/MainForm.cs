@@ -590,7 +590,9 @@ namespace LoksimClient
                         LoksimHelper.AddParam(ref Params, LoksimHelper.cLOK_SYSTEM_INDUSIHZ1000);
                         LoksimHelper.AddParam(ref Params, LoksimHelper.cLOK_SYSTEM_INDUSIHZ500);
                         LoksimHelper.AddParam(ref Params, LoksimHelper.cLOK_COMMON_ZUGSICHERUNG);
-						
+
+                        LoksimHelper.AddParam(ref Params, LoksimHelper.cLOK_ANZEIGE_FEDERSPEICHERBREMSE);
+
 						string RetParams = Loksim.GetSimData( Params);          			
 						
 						ActSpeed = LoksimHelper.GetParamFloat( RetParams, LoksimHelper.cLOK_COMMON_ACTSPEED);          				
@@ -611,12 +613,15 @@ namespace LoksimClient
 
                         label1000Hz.Text = "1000Hz " + LoksimHelper.GetParamBool(RetParams, LoksimHelper.cLOK_ANZEIGE_INDUSIHZ1000);
                         label500Hz.Text = "500Hz " + LoksimHelper.GetParamBool(RetParams, LoksimHelper.cLOK_ANZEIGE_INDUSIHZ500);
-                        labelWechselblinken.Text = "Wechselblinken " + LoksimHelper.GetParamFloat(RetParams, LoksimHelper.cLOK_ANZEIGE_INDUSIWECHSELBLINKEN);
+                        labelWechselblinken.Text = "Wechselblinken " + LoksimHelper.GetParamBool(RetParams, LoksimHelper.cLOK_ANZEIGE_INDUSIWECHSELBLINKEN);
                         label1000HzSystem.Text = "S 1000Hz " + LoksimHelper.GetParamBool(RetParams, LoksimHelper.cLOK_SYSTEM_INDUSIHZ1000);
                         label500HzSystem.Text = "S 500Hz " + LoksimHelper.GetParamBool(RetParams, LoksimHelper.cLOK_SYSTEM_INDUSIHZ500);
                         var zs = LoksimHelper.GetParamString(RetParams, LoksimHelper.cLOK_COMMON_ZUGSICHERUNG);
                         lblZugsicherung.Text = "Zugsicherung " + zs;
                         SampleProcessors.ProcessZugsicherung(zs);
+
+                        var federspeicherBremse = LoksimHelper.GetParamBool(RetParams, LoksimHelper.cLOK_ANZEIGE_FEDERSPEICHERBREMSE);
+                        Console.WriteLine(federspeicherBremse);
 					}
 					else
 					{

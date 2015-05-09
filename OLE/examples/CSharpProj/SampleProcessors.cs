@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 
@@ -30,14 +31,14 @@ namespace LoksimClient
                         if (i.Length > 0 && i[0] == 'V')
                         {
                             // i = Version of PZB90
-                            float version = float.Parse(i.Substring(1));
+                            float version = float.Parse(i.Substring(1), CultureInfo.InvariantCulture);
                             // version now contains version of used PZB90
                             // i.e. 1.5, 1.6 or 2.0
                         }
                     }
                 }
                 // ...
-                // important: Never assume any ordering of the returned parts of spitting the string at ';'
+                // important: Never assume any ordering of the returned parts of splitting the string at ';'
             }
         }
     }
