@@ -119,6 +119,9 @@ Benötigt man einen Teil der TCP-Schnittstelle die (derzeit) im Loksim nicht umg
 | **2666** | **0A6A** | **PZB restriktiv** | **Ja** | |
 | **2667** | **0A6B** | **PZB-Zwansgbremsung** | **Ja** | |
 | **2680** | **0A78** | **Oberstrom** | **Ja, nur Loksim** | In Zusi 2 durch 2565/0A05/Zugkraft geregelt |
+| 2685 | 0A7D | Zustand Leuchtmelder Zugart U | Ja, nur Loksim | Wert: 0 = aus; 1 = ein; 2 = blinken; 3 = blinken (entgegen gesetzt von 2); 4 = blinken (doppelt so schnell wie 2); 5 = blinken (entgegen gesetzt von 4)
+| 2686 | 0A7E | Zustand Leuchtmelder Zugart M | Ja, nur Loksim | Wert: 0 = aus; 1 = ein; 2 = blinken; 3 = blinken (entgegen gesetzt von 2); 4 = blinken (doppelt so schnell wie 2); 5 = blinken (entgegen gesetzt von 4)
+| 2687 | 0A7F | Zustand Leuchtmelder Zugart O | Ja, nur Loksim | Wert: 0 = aus; 1 = ein; 2 = blinken; 3 = blinken (entgegen gesetzt von 2); 4 = blinken (doppelt so schnell wie 2); 5 = blinken (entgegen gesetzt von 4)
 
 ## PZB-Systeme
 Der gesendete Wert bei ''PZB-System'' ist statisch und nur abhängig davon, welche Induktive Zugsicherung im Führerstand eingestellt ist. Der Wert kann sich während der Fahrt nicht ändern
